@@ -1,0 +1,116 @@
+" Source your .vimsrc
+" source ~/.vimsrc
+
+let mapleader = " "
+let mapleaderlocal = " "
+
+map ш i
+map ф a
+map р h
+map о j
+map л k
+map д l
+map и b
+map ц w
+
+" Plugins
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'justinmk/vim-sneak'
+Plug 'machakann/vim-highlightedyank'
+
+"" Plugin Settings
+"" ========================================================
+set nerdtree
+set surround
+set sneak
+set highlightedyank
+
+set ideajoin
+set idearefactormode=keep
+set ideamarks
+
+set scrolloff=10
+set linenumber
+set showmode
+set showcmd
+
+set smartcase
+set incsearch
+set hlsearch
+
+set visualbell
+
+" Easymotion settings
+set easymotion
+set notimeout
+
+"" Leader commands
+"" ========================================================
+map <leader>e <Action>(ActivateProjectToolWindow)
+
+" Close active tab
+map <leader>q <action>(CloseContent)
+
+" Window splits
+map <leader>wv <Action>(SplitVertically)
+map <leader>ws <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+
+" Display options
+map <leader>dd <action>(ToggleDistractionFreeMode)
+map <leader>dz <action>(ToggleZenMode)
+map <leader>df <action>(ToggleFullScreen)
+
+" Actions
+map <leader>am <action>(ShowIntentionActions)
+map <leader>as <action>(SearchEverywhere)
+map <leader>k <action>(QuickJavaDoc)
+imap <C-s> <Action>(ParameterInfo)
+map <C-s> <Action>(ParameterInfo)
+map <leader>oc <Action>(ReformatCode)
+map <leader>oi <Action>(OptimizeImports)
+map <leader>ru <Action>(Run)
+
+" File navigation
+map <leader>ff <action>(GotoFile)
+map <leader>fr <action>(RecentFiles)
+map <leader>fc <action>(FindInPath)
+map <leader>fl <action>(RecentLocations)
+map <leader>fs <action>(NewScratchFile)
+
+" Refactoring
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+" Test
+map <leader>ot <Action>(GotoTest)
+map <leader>ct <Action>(GenerateTestMethod)
+map <leader>C <Action>(Generate)
+map <leader>tt <Action>(RunClass)
+
+" Go to code
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gt <Action>(GotoTest)
+nmap <leader>gf <Action>(Back)
+nmap <leader>gb <Action>(Forward)
+
+" Git windows
+map <leader>gc <Action>(CheckinProject)
+map <leader>gs <Action>(ActivateVersionControlToolWindow)
+map <leader>gb <Action>(Git.Branches)
+
+" Errors
+map <leader>en <Action>(GotoNextError)
+map <leader>ep <Action>(GotoPreviousError)
+
+" Terminal
+map <leader>tm :action ActivateTerminalToolWindow<CR>
