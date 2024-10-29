@@ -1,0 +1,16 @@
+br = branch
+co = checkout
+rup = remote update
+rpo = remote prune origin
+st = status
+dc = diff --cached
+cane = commit --amend --no-edit
+cam = commit --amend
+rb = rebase
+rbi = rebase --interactive
+rbc = rebase --continue
+rba = rebase --abort
+mg = merge
+mga = merge --abort
+mgc = merge --continue
+cm = commit 
