@@ -114,3 +114,7 @@ map <leader>ep <Action>(GotoPreviousError)
 
 " Terminal
 map <leader>tm :action ActivateTerminalToolWindow<CR>
+
+" Macros
+map <Leader>erm :normal! iif err != nil {return fmt.Errorf(": %w", err)}
+nnoremap <leader>col :s/,/,\r/g<CR>='['[:noh<CR>'[
